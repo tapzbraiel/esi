@@ -1,7 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Activation extends CI_Controller{
-
+	
 	function __construct(){
 		parent::__construct();
 		if(!$this->session->userdata('login_id')){
@@ -38,8 +38,8 @@ class Activation extends CI_Controller{
 		$ac_cols=array();
 		foreach ($codes as $key => $value) {
 			$ac=new Activation_code_model();
-			$ac->NO=$value[0];
-			$ac->CODE=$value[1];
+			$ac->ID=$value[0];
+			$ac->ACTIVATION_CODE=$value[1];
 			$ac_cols[]=$ac;
 			$counter++;
 		}
@@ -52,6 +52,24 @@ class Activation extends CI_Controller{
 		$this->load->view('inc/admin/generated_activation_code',$data);
 		$this->load->view('inc/footer_view');
 		//echo '<tt><pre>'.var_export($ac_cols,TRUE).'</pre></tt>'; 
+	}
+
+	function saveGeneratedCode(){
+		$codes=array();
+		$codes=explode(",",$this->input->post(html_escape("imploded_codes")));
+		//echo date('Y-m-d H:i:s a', time());
+		/*
+		*loop until arraySize minus one then save to database
+		*/
+		echo count($codes);
+		for($x=0;$x<count($codes)-1;$x++){
+			$this->load->model('activation_code_model');
+			$ac=new Activation_code_model();
+			$ac->ACTIVATION_CODE=$codes[$x];
+			$ac->GENERATED_DATE=date('Y-m-d H:i:s a', time());
+			$ac->GENERATED_BY=$this->session->userdata('login_id');
+			$ac->save();
+		}
 	}
 
 	function randomized(){

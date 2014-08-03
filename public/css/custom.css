@@ -2,7 +2,9 @@
 	margin:0px auto;
 	padding:0px;
 	text-align:center;
-	font-family: calibri;
+	font-family: Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
 }
 .container{
 	background:#fff;
@@ -142,6 +144,9 @@
 .prod_desc .desc, .prod_desc h2{
 	text-align: left;
 }
+.desc{
+	font-size: 14px;
+}
 /*row 6*/
 #row6{
 	padding-top:50px;
@@ -218,32 +223,58 @@
 #company_name{
 	color:#8ff959;
 }
+/* -------------------- global css ------------------------*/
+.esi-btn{
+	background: #8ff959;
+	color: #111;
+}
+.esi-btn:hover{
+	background: #c40202;
+	color: #fff;
+}
+.align_left{
+	display: block;
+	text-align: left;
+}
+.left_only_align{
+	text-align: left;
+}
+.align_right{
+	display: block;
+	text-align: right;
+}
+.alert-error{
+ 	background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+	}
+	
+.alert{
+ 	border-radius: 4px;
+    margin-bottom: 5px;
+    padding: 8px 35px 8px 14px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.fill_parent{
+	width:100%;
+}
 
 /*-------------------------------------------------------- log in form ---------------------*/
 #login_form{
-	margin-top: 50px;
+	background: #f3f3f3;
+	border-radius: 12px;
+    margin-top: 50px;
+    padding-bottom: 12px;
+    padding-top: 25px;
 }
-#form_wrapper{
-	margin: 0px;
+#login_title{
+	padding: 10px 0;
 }
-.controls{
-	margin: 0px 0px 15px 0px;
+#btn_login{
+	padding-left: 20px;
+	padding-right: 20px;
 }
-#username_control_holder, #pw_control_holder{
-	margin-left: 186px;
-}
-#btn-login-holder{
-	text-align: right;
-	margin-left: 186px;
-}
-#btn-login{
-	width: 100%;
-	padding: 10px;
-	background: #c40202;
-}
-.input-xlarge{
-	text-align: left;
-}
+
 /*-------------------activation code ------------*/
 
 #activation_code_col{
@@ -293,6 +324,7 @@
 /*-------------generated code -----------*/
 #generated_code_col{
 	margin-top: 0px;
+	padding-top: 20px;
 	text-align: left;
 	background: #f3f3f3;
 }
@@ -323,7 +355,7 @@
 }
 #gen_code_actions li a{
 	display: block;
-	width: 100px;
+	width: 130px;
 	height: 35px;
 	background: #8ff959;
 	line-height: 35px;
@@ -333,4 +365,7 @@
 #gen_code_actions li a:hover{
 	color: #fff;
 	background: #c40202;
+}
+#generated_codes_action_wrapper{
+	margin-bottom: 30px;
 }
