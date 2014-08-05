@@ -1,3 +1,8 @@
+<div id="pending_title" class="row">
+	<div class="col-xs-12">
+		<h2 class="align_left">List of Pending</h2>
+	</div>
+</div>
 <div class="table-responsive">
 <table class="table">
 <thead>

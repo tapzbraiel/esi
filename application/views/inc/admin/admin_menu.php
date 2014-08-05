@@ -4,7 +4,7 @@
 				<li class="col-md-2"><a href="<?=site_url()?>">HOME</a></li>
 				<li class="col-md-2"><a href="<?=site_url('activation')?>">GENERATE CODE</a></li>
 				<li class="col-md-2"><a href="<?=site_url('home_view')?>">MEMBERS</a></li>
-				<li class="col-md-2"><a href="<?=site_url('home_view')?>">PENDING</a></li>
+				<li class="col-md-2"><a href="<?=site_url('pending')?>">PENDING</a></li>
 				<li class="col-md-2"><a href="<?=site_url('home_view')?>">ENCASHMENT</a></li>
 				<li class="col-md-2"><a href="<?=site_url('home_view')?>">SETTINGS</a></li>
 			</ul>

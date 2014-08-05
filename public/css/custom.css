@@ -258,6 +258,14 @@
 .fill_parent{
 	width:100%;
 }
+.esi-title{
+	color: #008000;
+	text-align: left;
+font-size: 18px;
+font-weight: bold;
+padding: 20px 0px 10px;
+
+}
 
 /*-------------------------------------------------------- log in form ---------------------*/
 #login_form{
@@ -368,4 +376,12 @@
 }
 #generated_codes_action_wrapper{
 	margin-bottom: 30px;
+}
+
+/*------------------- saved activation code --------*/
+
+
+/*-------------------pending ----------------------*/
+#pending_title{
+	margin-top: 20px;
 }

@@ -61,7 +61,7 @@ class Activation extends CI_Controller{
 		/*
 		*loop until arraySize minus one then save to database
 		*/
-		echo count($codes);
+		$msg = (count($codes)-1)." Activation Code Successfully saved!";
 		for($x=0;$x<count($codes)-1;$x++){
 			$this->load->model('activation_code_model');
 			$ac=new Activation_code_model();
@@ -70,6 +70,14 @@ class Activation extends CI_Controller{
 			$ac->GENERATED_BY=$this->session->userdata('login_id');
 			$ac->save();
 		}
+		$data['msg']=$msg;
+		$data['codes']=$codes;
+		$this->load->view('inc/header_view');
+		$this->load->view('inc/admin/admin_logged_top_nav');
+		$this->load->view('inc/company_logo_tagline');
+		$this->load->view('inc/admin/admin_menu');
+		$this->load->view('inc/admin/saved_activation_code_view',$data);
+		$this->load->view('inc/footer_view');
 	}
 
 	function randomized(){
