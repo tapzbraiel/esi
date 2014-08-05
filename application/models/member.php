@@ -24,6 +24,7 @@ class Member extends MY_Model{
 	public $IS_ACTIVE;
 	public $IS_APPROVED;
 
+<<<<<<< HEAD
 	/*private $table_to_join=array();
 	private $common_fields=array();
 
@@ -39,4 +40,7 @@ class Member extends MY_Model{
 		echo "common_fields ".count($this->common_fields);
 		return parent::get_join_record($this->table_to_join,$this->common_fields,$limit,$offset);
 	}*/
+=======
+ 
+>>>>>>> 310c9e24d6bc219a9eb4e30270d2c8d2a7a0bb2c
 }

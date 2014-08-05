@@ -43,6 +43,10 @@ class MY_Model extends CI_Model{
 		}
 	}
 
+	public function record_count() {
+        return $this->db->count_all($this::DB_TABLE);
+    }
+    
 	public function get($limit=0,$offset=0){
 		if($limit){
 			$query=$this->db->get($this::DB_TABLE,$limit,$offset);
