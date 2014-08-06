@@ -24,4 +24,5 @@ class Member extends MY_Model{
 	public $IS_ACTIVE;
 	public $IS_APPROVED;
 
+ 
 }

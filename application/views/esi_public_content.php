@@ -4,7 +4,11 @@
 				<div class="row widget widget_top_margin">Watch this video on how to earn</div>
 				<div id="video_holder" class="row">
 						<div class="col-lg-1 col-sm-1 col-xs-1"></div>
-						<div class="col-lg-10 col-sm-10 col-xs-10"><img id="video" src="<?=base_url()?>public/img/video.jpg"/></div>
+						<div class="col-lg-10 col-sm-10 col-xs-10"><!--<img id="video" src="<?=base_url()?>public/img/video.jpg"/>-->
+							<div class="embed-responsive embed-responsive-4by3">
+							     <iframe class="embed-responsive-item" src="http://www.youtube.com/v/H_Z6U-hSUhU?version=3&amp;hl=fil_PH"></iframe>
+							</div>
+						</div>
 						<div class="col-lg-1 col-sm-1 col-xs-1"></div>
 				</div>
 				<div class="row widget_top_margin">

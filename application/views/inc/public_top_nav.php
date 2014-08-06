@@ -6,7 +6,7 @@
 				<ul class="row" id="login_signup">
 					<li class="col-md-4"></li>
 					<li class="col-md-4"><a id="login" href="<?=site_url('login')?>">LOG IN</a></li>
-					<li class="col-md-4"><a id="signup" href="<?=site_url('home/signUp')?>">SIGN UP</a></li>
+					<li class="col-md-4"><a id="signup" href="<?=site_url('sign_up')?>">SIGN UP</a></li>
 				</ul>
 			</div>
 		</header>

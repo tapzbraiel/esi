@@ -1,3 +1,7 @@
+.label-gender
+{
+	margin: 3px 95px 0px 0px;
+}
 *{
 	margin:0px auto;
 	padding:0px;
@@ -134,11 +138,11 @@
 #row5 img{
 	width:100%;
 	height:100%;
-	border:1px solid #eeeeee;
+	/*border:1px solid #eeeeee;*/
 }
 #row5 .row5_col:hover{
-    border: 1px solid #c40202;
-}
+    -moz-box-shadow: 0 0 10px #ccc; -webkit-box-shadow: 0 0 10px #ccc; box-shadow: 0 0 10px #ccc;
+	}
 .prod_desc .desc, .prod_desc h2{
 	text-align: left;
 }
