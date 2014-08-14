@@ -1,5 +1,11 @@
 <div class="row esi-title">
 	<div class="col-xs-12">
+		<p class="alert alert-success">
+			<?php
+			if(isset($username))
+			echo $username." ";
+			?>account successfully approved.
+		</p>
 		<h3 class="align_left">List of Pending</h3>
 	</div>
 </div>

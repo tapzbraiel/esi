@@ -2,7 +2,7 @@
 	<div id="generated_code_col" class="col-md-7">
 		<div class="row">
 			<div class="col-xs-12">
-				<p class="esi-title">
+				<p class="alert alert-success">
 					<?php echo $msg;?>
 				</p>
 			</div>

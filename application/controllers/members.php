@@ -6,41 +6,30 @@ class Members extends CI_Controller{
 		if(!$this->session->userdata('login_id')){
 			redirect('login');
 		}
+		$this->load->model('member');
 	}
 	function index(){
-		$this->getMembers();
+		$this->loadMembers();
 	}
 	
-	function getMembers(){
-		
-		$memberdata =array();
-		$member_col=array();
+	function loadMembers($starts=0){
 
-		$this->load->model('Member');
-		$this->load->library("pagination");
-		$member=new Member();		
-		$member_col=$member->get();
+		$m=new Member();
+		$ar=$m->loadActiveMembers(1,$starts);
 		
-		$config = array();
-        $config["base_url"] = "members/getMembers";
-        $config["total_rows"] = $this->Member->record_count();
-        $config["per_page"] = 1;
-        $config["uri_segment"] = 3;
-	    $choice = $config["total_rows"] / $config["per_page"];
-	    $config["num_links"] = round($choice);
- 
-        $this->pagination->initialize($config);
- 
-        $page = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
-        $memberdata["results"] = $this->Member->get($config["per_page"], $page);
-        $memberdata["links"] = $this->pagination->create_links();
- 
-		
+		$this->load->library('pagination');
+		$config['base_url']=base_url().'index.php/members/loadMembers';
+		$config['total_rows']=$m->active_members_count();
+		$config['per_page']=1;
+		$this->pagination->initialize($config);
+		$data['members']=$ar;
+		$data['pages']=$this->pagination->create_links();
+
 		$this->load->view('inc/header_view');
 		$this->load->view('inc/admin/admin_logged_top_nav');
 		$this->load->view('inc/company_logo_tagline');
 		$this->load->view('inc/admin/admin_menu');
-		$this->load->view('members_view',$memberdata);
+		$this->load->view('inc/member/members_view',$data);
 		$this->load->view('inc/footer_view');
 	}
 }

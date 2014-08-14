@@ -247,6 +247,11 @@
 	display: block;
 	text-align: right;
 }
+.alert-success {
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    color: #ffffff;
+}
 .alert-error{
  	background-color: #f2dede;
     border-color: #eed3d7;
@@ -265,10 +270,9 @@
 .esi-title{
 	color: #008000;
 	text-align: left;
-font-size: 18px;
-font-weight: bold;
-padding: 20px 0px 10px;
-
+	font-size: 18px;
+	font-weight: bold;
+	padding: 20px 0px 10px;
 }
 
 /*-------------------------------------------------------- log in form ---------------------*/
@@ -386,6 +390,3 @@ padding: 20px 0px 10px;
 
 
 /*-------------------pending ----------------------*/
-#pending_title{
-	margin-top: 20px;
-}
