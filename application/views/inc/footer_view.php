@@ -3,10 +3,10 @@
 	<div id="footer" class="row">
 			<ul class="col-sm-12">
 				<li><p id="follow_us">FOLLOW US</p></li>
-				<li><a href="<?=site_url('home_view')?>"><img src="<?=base_url()?>public/img/fb.png"/></a></li>
-				<li><a href="<?=site_url('home_view')?>"><img src="<?=base_url()?>public/img/google.png"/></a></li>
-				<li><a href="<?=site_url('home_view')?>"><img src="<?=base_url()?>public/img/twitter.png"/></a></li>
-				<li><a href="<?=site_url('home_view')?>"><img src="<?=base_url()?>public/img/linkedin.png"/></a></li>
+				<li><a href="#"><img src="<?=base_url()?>public/img/fb.png"/></a></li>
+				<li><a href="#"><img src="<?=base_url()?>public/img/google.png"/></a></li>
+				<li><a href="#"><img src="<?=base_url()?>public/img/twitter.png"/></a></li>
+				<li><a href="#"><img src="<?=base_url()?>public/img/linkedin.png"/></a></li>
 			</ul>
 	</div>
 	<div class="container">
@@ -14,7 +14,7 @@
 			<div class="col-sm-10">
 			</div>
 			<div class="col-sm-2">
-				<a href="<?=site_url('home_view')?>"><img src="<?=base_url()?>public/img/back_to_top.png"/></a>
+				<a href=""><img src="<?=base_url()?>public/img/back_to_top.png"/></a>
 			</div>
 		</div>
 	</div>

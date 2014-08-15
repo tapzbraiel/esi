@@ -24,7 +24,7 @@ class Login extends CI_Controller{
 		$this->form_validation->set_error_delimiters('<div class="alert alert-error">','</div>');
 		if(!$this->form_validation->run()){
 			$this->load->view('inc/header_view');		
-			$this->load->view('inc/company_logo_tagline');
+			$this->load->view('inc/company_logo_tagline',array('top_margin'=>60));
 			$this->load->view('login_view');//trigger error on submit if data are not valid
 			$this->load->view('inc/footer_view');	
 		}

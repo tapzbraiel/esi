@@ -23,11 +23,11 @@ class Sign_Up extends CI_Controller{
 		));
 		$this->form_validation->set_error_delimiters('<div class="alert alert-error">','</div>');
 		if(!$this->form_validation->run()){
-			$this->load->view('inc/header_view');
-			$this->load->view('inc/admin/admin_logged_top_nav');
+			$this->load->view('inc/header_view');		
+			$this->load->view('inc/public_top_nav');
 			$this->load->view('inc/company_logo_tagline');
-			$this->load->view('inc/admin/admin_menu');
-			$this->load->view('sign_up');//trigger error on submit if data are not valid
+			$this->load->view('inc/public_menu');
+			$this->load->view('sign_up_view');//trigger error on submit if data are not valid
 			$this->load->view('inc/footer_view');	
 		}
 		else{

@@ -36,7 +36,7 @@
 			<a href="#">Forgot your password?</a>
 		</div>
 		<div class="row">
-			<div class="col-xs-12 align_left"><a href="#">Need an account? Sign up now.</a></div>
+			<div class="col-xs-12 align_left"><a href="<?=site_url('sign_up')?>">Need an account? Sign up now.</a></div>
 		</div>
 	</form>
 	<div class="col-lg-4"></div>

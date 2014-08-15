@@ -15,12 +15,12 @@ class Members extends CI_Controller{
 	function loadMembers($starts=0){
 
 		$m=new Member();
-		$ar=$m->loadActiveMembers(1,$starts);
+		$ar=$m->loadActiveMembers(10,$starts);
 		
 		$this->load->library('pagination');
 		$config['base_url']=base_url().'index.php/members/loadMembers';
 		$config['total_rows']=$m->active_members_count();
-		$config['per_page']=1;
+		$config['per_page']=10;
 		$this->pagination->initialize($config);
 		$data['members']=$ar;
 		$data['pages']=$this->pagination->create_links();
