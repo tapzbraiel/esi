@@ -22,6 +22,22 @@ class Pending_model extends CI_Model{
 		$this->db->JOIN('members_referral mr','mem.IDMEMBERS=mr.members_id','INNER');
 		$this->db->JOIN('members mem2','mr.referrals_id=mem2.IDMEMBERS','INNER');
 		$this->db->JOIN('users u2','mem2.IDMEMBERS=u2.IDMEMBERS','INNER');
+<<<<<<< HEAD
+=======
+		$this->db->where(array('mem.IS_ACTIVE'=>1,'mem.IS_APPROVED'=>0));
+		$query=$this->db->get();
+		return $query->result_array();
+	}
+
+	function loadPendingUser($id){
+		$this->db->SELECT('s.USER_NAME,mem.IDMEMBERS,mem.ACTIVATION_CODE,mem.FIRST_NAME,mem.LAST_NAME,mem2.IDMEMBERS as REFERRALS_ID,mem2.ACTIVATION_CODE AS REFERRALS_ACTIVATION, mem2.FIRST_NAME AS REFERRALS_FNAME,u2.USER_NAME as REFERRALS_USERNAME');
+		$this->db->FROM('users s');
+		$this->db->JOIN('members mem','s.IDMEMBERS=mem.IDMEMBERS','INNER');
+		$this->db->JOIN('members_referral mr','mem.IDMEMBERS=mr.members_id','INNER');
+		$this->db->JOIN('members mem2','mr.referrals_id=mem2.IDMEMBERS','INNER');
+		$this->db->JOIN('users u2','mem2.IDMEMBERS=u2.IDMEMBERS','INNER');
+		$this->db->where('mem.IDMEMBERS',$id);
+>>>>>>> aa2443fefe75a9e89aa7fae06d43046322374fe0
 		$query=$this->db->get();
 		return $query->result_array();
 	}

@@ -27,6 +27,35 @@ class Member extends MY_Model{
 	private $table_to_join=array();
 	private $common_fields=array();
 
+<<<<<<< HEAD
+=======
+	function loadActiveMembers($num=10,$start=0){
+		/*
+		SELECT * FROM `members` mem
+		INNER JOIN users u
+		ON mem.IDMEMBERS=u.IDMEMBERS
+		WHERE mem.IS_ACTIVE=1
+		AND mem.IS_APPROVED=1
+		*/
+		$this->db->SELECT('mem.*,u.*');
+		$this->db->FROM('members mem');
+		$this->db->JOIN('users u','mem.IDMEMBERS=u.IDMEMBERS','INNER');
+		$this->db->where(array('mem.IS_ACTIVE'=>1,'mem.IS_APPROVED'=>1));
+		$this->db->limit($num,$start);
+		$query=$this->db->get();
+		return $query->result_array();
+	}
+
+	function active_members_count(){
+		$this->db->SELECT('mem.*,u.*');
+		$this->db->FROM('members mem');
+		$this->db->JOIN('users u','mem.IDMEMBERS=u.IDMEMBERS','INNER');
+		$this->db->where(array('mem.IS_ACTIVE'=>1,'mem.IS_APPROVED'=>1));
+		$query=$this->db->get();
+		return $query->num_rows();
+	}
+
+>>>>>>> aa2443fefe75a9e89aa7fae06d43046322374fe0
 	function addTableToJoin($table_name_with_alias){
 		$this->table_to_join[]=$table_name_with_alias;
 	}
