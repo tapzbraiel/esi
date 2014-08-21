@@ -1,8 +1,14 @@
+.label-gender
+{
+	margin: 3px 95px 0px 0px;
+}
 *{
 	margin:0px auto;
 	padding:0px;
 	text-align:center;
-	font-family: calibri;
+	font-family: Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
 }
 .container{
 	background:#fff;
@@ -134,13 +140,16 @@
 #row5 img{
 	width:100%;
 	height:100%;
-	border:1px solid #eeeeee;
+	/*border:1px solid #eeeeee;*/
 }
 #row5 .row5_col:hover{
-    border: 1px solid #c40202;
-}
+    -moz-box-shadow: 0 0 10px #ccc; -webkit-box-shadow: 0 0 10px #ccc; box-shadow: 0 0 10px #ccc;
+	}
 .prod_desc .desc, .prod_desc h2{
 	text-align: left;
+}
+.desc{
+	font-size: 14px;
 }
 /*row 6*/
 #row6{
@@ -218,32 +227,66 @@
 #company_name{
 	color:#8ff959;
 }
+/* -------------------- global css ------------------------*/
+.esi-btn{
+	background: #8ff959;
+	color: #111;
+}
+.esi-btn:hover{
+	background: #c40202;
+	color: #fff;
+}
+.align_left{
+	display: block;
+	text-align: left;
+}
+.left_only_align{
+	text-align: left;
+}
+.align_right{
+	display: block;
+	text-align: right;
+}
+.alert-error{
+ 	background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+	}
+	
+.alert{
+ 	border-radius: 4px;
+    margin-bottom: 5px;
+    padding: 8px 35px 8px 14px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.fill_parent{
+	width:100%;
+}
+.esi-title{
+	color: #008000;
+	text-align: left;
+font-size: 18px;
+font-weight: bold;
+padding: 20px 0px 10px;
+
+}
 
 /*-------------------------------------------------------- log in form ---------------------*/
 #login_form{
-	margin-top: 50px;
+	background: #f3f3f3;
+	border-radius: 12px;
+    margin-top: 50px;
+    padding-bottom: 12px;
+    padding-top: 25px;
 }
-#form_wrapper{
-	margin: 0px;
+#login_title{
+	padding: 10px 0;
 }
-.controls{
-	margin: 0px 0px 15px 0px;
+#btn_login{
+	padding-left: 20px;
+	padding-right: 20px;
 }
-#username_control_holder, #pw_control_holder{
-	margin-left: 186px;
-}
-#btn-login-holder{
-	text-align: right;
-	margin-left: 186px;
-}
-#btn-login{
-	width: 100%;
-	padding: 10px;
-	background: #c40202;
-}
-.input-xlarge{
-	text-align: left;
-}
+
 /*-------------------activation code ------------*/
 
 #activation_code_col{
@@ -293,6 +336,7 @@
 /*-------------generated code -----------*/
 #generated_code_col{
 	margin-top: 0px;
+	padding-top: 20px;
 	text-align: left;
 	background: #f3f3f3;
 }
@@ -323,7 +367,7 @@
 }
 #gen_code_actions li a{
 	display: block;
-	width: 100px;
+	width: 130px;
 	height: 35px;
 	background: #8ff959;
 	line-height: 35px;
@@ -334,3 +378,139 @@
 	color: #fff;
 	background: #c40202;
 }
+#generated_codes_action_wrapper{
+	margin-bottom: 30px;
+}
+
+/*------------------- saved activation code --------*/
+
+
+/*-------------------pending ----------------------*/
+#pending_title{
+	margin-top: 20px;
+}
+
+
+/* Gallery Css */
+/* jssor slider thumbnail navigator skin 01 css */
+						                /*
+						                .jssort01 .p           (normal)
+						                .jssort01 .p:hover     (normal mouseover)
+						                .jssort01 .pav           (active)
+						                .jssort01 .pav:hover     (active mouseover)
+						                .jssort01 .pdn           (mousedown)
+						                */
+						                .jssort01 .w {
+						                    position: absolute;
+						                    top: 0px;
+						                    left: 0px;
+						                    width: 100%;
+						                    height: 100%;
+						                }
+
+						                .jssort01 .c {
+						                    position: absolute;
+						                    top: 0px;
+						                    left: 0px;
+						                    width: 68px;
+						                    height: 68px;
+						                    border: #000 2px solid;
+						                }
+
+						                .jssort01 .p:hover .c, .jssort01 .pav:hover .c, .jssort01 .pav .c {
+						                    background: url(t01.png) center center;
+						                    border-width: 0px;
+						                    top: 2px;
+						                    left: 2px;
+						                    width: 68px;
+						                    height: 68px;
+						                }
+
+						                .jssort01 .p:hover .c, .jssort01 .pav:hover .c {
+						                    top: 0px;
+						                    left: 0px;
+						                    width: 70px;
+						                    height: 70px;
+						                    border: #fff 1px solid;
+						                }
+						                /* jssor slider arrow navigator skin 05 css */
+						            /*
+						            .jssora05l              (normal)
+						            .jssora05r              (normal)
+						            .jssora05l:hover        (normal mouseover)
+						            .jssora05r:hover        (normal mouseover)
+						            .jssora05ldn            (mousedown)
+						            .jssora05rdn            (mousedown)
+						            */
+						            .jssora05l, .jssora05r, .jssora05ldn, .jssora05rdn
+						            {
+						            	position: absolute;
+						            	cursor: pointer;
+						            	display: block;
+						                background-image: url(a17.png);
+						                
+						                overflow:hidden;
+						            }
+						            .jssora05l { background-position: -10px -40px; }
+						            .jssora05r { background-position: -70px -40px; }
+						            .jssora05l:hover { background-position: -130px -40px; }
+						            .jssora05r:hover { background-position: -190px -40px; }
+						            .jssora05ldn { background-position: -250px -40px; }
+						            .jssora05rdn { background-position: -310px -40px; }
+.slider1_container
+{
+	position: relative; 
+	top: 0px; 
+	left: 0px;
+	width:800px;
+	height: 456px; 
+	background: #191919;
+	overflow: hidden;
+}
+.u-loading
+{
+	position: absolute;
+	 top: 0px;
+	  left: 0px;
+}
+.l-loading
+{
+	filter: alpha(opacity=70);
+	 opacity:0.7;
+	 position: absolute;
+	 display: block;
+	 background-color: #000000;
+	 top: 0px;
+	 left: 0px;
+	 width: 100%;
+	 height:100%;
+}
+.l-loading1
+{
+	position: absolute; 
+	display: block;
+	 background-image: url(loading.gif) no-repeat center center;
+						                top: 0px; left: 0px;width: 100%;height:100%;
+}
+.slides
+{
+	cursor: move; position: absolute; left: 0px; top: 0px; width: 800px; height: 356px; overflow: hidden;
+}
+#left-arrow
+{
+	width: 40px; height: 40px; top: 158px; left: 8px;
+}
+#right-arrow
+{
+	width: 40px; height: 40px; top: 158px; right: 8px
+}
+#thumbnailnavigator
+{
+	position: absolute; width: 800px; height: 100px; left:0px; bottom: 0px;
+}
+#prototype
+{
+	position: absolute; width: 72px; height: 72px; top: 0; left: 0;
+}
+
+

@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Login extends CI_Controller{
+class Sign_Up extends CI_Controller{
 
 	function index(){ //for validation
 		$this->load->library('form_validation');
@@ -23,9 +23,11 @@ class Login extends CI_Controller{
 		));
 		$this->form_validation->set_error_delimiters('<div class="alert alert-error">','</div>');
 		if(!$this->form_validation->run()){
-			$this->load->view('inc/header_view');		
+			$this->load->view('inc/header_view');
+			$this->load->view('inc/admin/admin_logged_top_nav');
 			$this->load->view('inc/company_logo_tagline');
-			$this->load->view('login_view');//trigger error on submit if data are not valid
+			$this->load->view('inc/admin/admin_menu');
+			$this->load->view('sign_up');//trigger error on submit if data are not valid
 			$this->load->view('inc/footer_view');	
 		}
 		else{
@@ -56,13 +58,6 @@ class Login extends CI_Controller{
 			}
 		}
 		else{
-			$data['invalid']='<div class="alert alert-error">Invalid username/password</div>';
-			if($this->form_validation->run()){
-			$this->load->view('inc/header_view');		
-			$this->load->view('inc/company_logo_tagline');
-			$this->load->view('login_view',$data);//trigger error on submit if data are not valid
-			$this->load->view('inc/footer_view');	
-		}
 			$this->load->view('failed_msg');
 		}
 	}

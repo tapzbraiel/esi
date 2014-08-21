@@ -4,7 +4,11 @@
 				<div class="row widget widget_top_margin">Watch this video on how to earn</div>
 				<div id="video_holder" class="row">
 						<div class="col-lg-1 col-sm-1 col-xs-1"></div>
-						<div class="col-lg-10 col-sm-10 col-xs-10"><img id="video" src="<?=base_url()?>public/img/video.jpg"/></div>
+						<div class="col-lg-10 col-sm-10 col-xs-10"><!--<img id="video" src="<?=base_url()?>public/img/video.jpg"/>-->
+							<div class="embed-responsive embed-responsive-4by3">
+							     <iframe class="embed-responsive-item" src="http://www.youtube.com/v/H_Z6U-hSUhU?version=3&amp;hl=fil_PH"></iframe>
+							</div>
+						</div>
 						<div class="col-lg-1 col-sm-1 col-xs-1"></div>
 				</div>
 				<div class="row widget_top_margin">
@@ -27,6 +31,111 @@
 							</div>
 						</div>
 					</div>
+				</div>
+				
+				<div class="row widget widget_top_margin">Images Gallery</div>
+				<div id="video_holder" class="row">
+						<div class="col-lg-1 col-sm-1 col-xs-1"></div>
+						<div class="col-lg-10 col-sm-10 col-xs-10">
+							
+							<div id="slider1_container" style="" class="slider1_container">
+
+						        <!-- Loading Screen -->
+						        <div u="loading" style="" class="u-loading">
+						            <div style="" class="l-loading">
+						            </div>
+						            <div style="" class="l-loading1">
+						            </div>
+						        </div>
+
+						        <!-- Slides Container -->
+						        <div u="slides" style="" class="slides">
+						            <div>
+						                <img u="image" src="<?=base_url()?>public/img/gluta.jpg" />
+						                <img u="thumb" src="<?=base_url()?>public/img/gluta.jpg" />
+						            </div>
+						            <div>
+						                <img u="image" src="<?=base_url()?>public/img/esi1.jpg" />
+						                <img u="thumb" src="<?=base_url()?>public/img/esi1.jpg" />
+						            </div>
+						            <div>
+						                <img u="image" src="<?=base_url()?>public/img/gluta.jpg" />
+						                <img u="thumb" src="<?=base_url()?>public/img/gluta.jpg" />
+						            </div>
+						            <div>
+						                <img u="image" src="<?=base_url()?>public/img/esi1.jpg" />
+						                <img u="thumb" src="<?=base_url()?>public/img/esi1.jpg" />
+						            </div>
+						            <div>
+						                <img u="image" src="<?=base_url()?>public/img/gluta.jpg" />
+						                <img u="thumb" src="<?=base_url()?>public/img/gluta.jpg" />
+						            </div>
+						            <div>
+						                <img u="image" src="<?=base_url()?>public/img/esi1.jpg" />
+						                <img u="thumb" src="<?=base_url()?>public/img/esi1.jpg" />
+						            </div>
+						            <div>
+						                <img u="image" src="<?=base_url()?>public/img/gluta.jpg" />
+						                <img u="thumb" src="<?=base_url()?>public/img/gluta.jpg" />
+						            </div>
+						            <div>
+						                <img u="image" src="<?=base_url()?>public/img/esi1.jpg" />
+						                <img u="thumb" src="<?=base_url()?>public/img/esi1.jpg" />
+						            </div>
+						            <div>
+						                <img u="image" src="<?=base_url()?>public/img/gluta.jpg" />
+						                <img u="thumb" src="<?=base_url()?>public/img/gluta.jpg" />
+						            </div>
+						            <div>
+						                <img u="image" src="<?=base_url()?>public/img/esi1.jpg" />
+						                <img u="thumb" src="<?=base_url()?>public/img/esi1.jpg" />
+						            </div>
+						            
+						            <div>
+						                <img u="image" src="<?=base_url()?>public/img/gluta.jpg" />
+						                <img u="thumb" src="<?=base_url()?>public/img/gluta.jpg" />
+						            </div>
+						            <div>
+						                <img u="image" src="<?=base_url()?>public/img/esi1.jpg" />
+						                <img u="thumb" src="<?=base_url()?>public/img/esi1.jpg" />
+						            </div>
+						            
+						        </div>
+						        
+						        <!-- Arrow Navigator Skin Begin -->
+						        <style>
+						            
+						        </style>
+						        <!-- Arrow Left -->
+						        <span u="arrowleft" class="jssora05l" style="" id="left-arrow">
+						        </span>
+						        <!-- Arrow Right -->
+						        <span u="arrowright" class="jssora05r" style="" id="right-arrow">
+						        
+						        </span>
+						        <!-- Arrow Navigator Skin End -->
+						        
+						        <!-- Thumbnail Navigator Skin Begin -->
+						        <div u="thumbnavigator" class="jssort01" style="" id="thumbnailnavigator">
+						            <!-- Thumbnail Item Skin Begin -->
+						            <style>
+						                
+						            </style>
+						            <div u="slides" style="cursor: move;">
+						                <div u="prototype" class="p" style="" id="prototype">
+						                    <div class="w">
+						                    	<thumbnailtemplate style=" width: 100%; height: 100%; border: none;position:absolute; top: 0; left: 0;"></thumbnailtemplate>
+						                    </div>
+						                    <div class="c">
+						                    </div>
+						                </div>
+						            </div>
+						            <!-- Thumbnail Item Skin End -->
+						        </div>
+					        <!-- Thumbnail Navigator Skin End -->
+					    </div>
+						</div>
+						<div class="col-lg-1 col-sm-1 col-xs-1"></div>
 				</div>
 			</div>
 			<div class="col-sm-4 col-sm-offset-1">

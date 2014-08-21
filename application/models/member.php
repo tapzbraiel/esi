@@ -5,7 +5,7 @@ class Member extends MY_Model{
 	LAST_NAME, BIRTHDAY, CIVIL_STATUS, AGE, GENDER, TIN, MEMBERSHIP_DATE, 
 	CONTACT_NUMBER, IMG, IS_ACTIVE, IS_APPROVED */
 
-	const DB_TABLE='members';
+	const DB_TABLE='members mem';
 	const DB_TABLE_PK='IDMEMBERS';
 
 	public $IDMEMBERS;
@@ -24,4 +24,19 @@ class Member extends MY_Model{
 	public $IS_ACTIVE;
 	public $IS_APPROVED;
 
+	private $table_to_join=array();
+	private $common_fields=array();
+
+	function addTableToJoin($table_name_with_alias){
+		$this->table_to_join[]=$table_name_with_alias;
+	}
+	function addCommonFieldsToJoin($fields_to_join_with_alias){
+		$this->common_fields[]=$fields_to_join_with_alias;
+	}
+
+	function join_record($limit=0,$offset=0){
+		echo "table_to_join_count ".count($this->table_to_join).'</br>';
+		echo "common_fields ".count($this->common_fields);
+		return parent::get_join_record($this->table_to_join,$this->common_fields,$limit,$offset);
+	}
 }

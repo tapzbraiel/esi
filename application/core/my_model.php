@@ -43,6 +43,10 @@ class MY_Model extends CI_Model{
 		}
 	}
 
+	public function record_count() {
+        return $this->db->count_all($this::DB_TABLE);
+    }
+    
 	public function get($limit=0,$offset=0){
 		if($limit){
 			$query=$this->db->get($this::DB_TABLE,$limit,$offset);
@@ -72,4 +76,22 @@ class MY_Model extends CI_Model{
 			$this->populate($query->row());
 		}
 	}
+
+	/*
+	*usage: query record from database
+	*param: table name to join, common fields between tables, optional limit, optional offset
+	* return array of array(resultset)
+	*/
+	/*protected function get_join_record($table_to_join,$common_fields,$limit=0,$offset=0){
+		$this->db->select('*');
+		$this->db->from($this::DB_TABLE);
+		for ($i=0; $i < count($table_to_join); $i++) { 
+			$this->db->join($table_to_join[$i],$common_fields[$i]);
+		}
+		if($limit){
+			$this->db->limit($limit,$offset);
+		}
+		$query = $this->db->get();
+		return $query->result_array();
+	}*/
 }
